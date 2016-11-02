@@ -9,7 +9,7 @@ $(function() {
           var top = target.offset().top;
           if (target.selector == "#main") top = 0;
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: top
         }, SCROLL_DUR);
         return false;
       }
