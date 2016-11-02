@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <title>PolyHacks - Florida Polytechnic University's Hackathon</title>
+        
+		<link rel="shortcut icon" href=resources/favicon.png />
+        <meta name=description content="Florida Polytechnic University's Student Hackathon">
+        <meta name=keywords content="florida,polytechnic,university,hackathon,poly,fl,flpoly,polyhacks,hack,programming,coding,code,event,major,league,hacking,mlh,stem,science,technology,engineering,mathematics,math,you,get,it">
+        <meta name=author content="Gabriel Hutchison">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto"
+              rel="stylesheet">
+        <link rel=stylesheet href=styles.css>
+        <link rel=stylesheet href=sections.css>
+        
+        <script src=jquery.min.js></script>
+        <script src=index.js></script>
+    </head>
+    <body>
+        <nav>
+            <a href=#main>Main</a>
+            <a href=#qa>Q&amp;A</a>
+            <a href=#whatnow>What Now?</a>
+            <a href=#sponsors>Sponsors</a>
+            <a href=#countdown>Countdown</a>
+            <a href=#map>Where?</a>
+            <a href=#contact>Contact</a>
+        </nav>
+        <nav class=hidden><a href="#">d</a></nav>
+        
+        <section id=main_s>
+            <a id=main></a>
+            <h1>POLYHACKS</h1>
+            <p>PolyHacks will be on March 24th-25th</p>
+            <br>
+            <div id=buttons>
+                <button id=btnRegister class=showTooltip
+                        tooltip="Sign up by January 3rd to attend!">
+                    Register!
+                </button>
+                <button id=btnVolunteer class=showTooltip
+                        tooltip="Help us run the hackathon!">
+                    Volunteer!
+                </button>
+                <button id=btnSponsor class=showTooltip
+                        tooltip="Give us $$$ plz!">
+                    Sponsor us!
+                </button>
+            </div>
+        </section>
+        
+        <section id=qa_s class=devel>
+            <a id=qa></a>
+            <h1>Q&amp;A</h1>
+            (Dynamic)
+        </section>
+        
+        <section id=whatnow_s class=devel>
+            <a id=whatnow></a>
+            <h1>What Now?</h1>
+        </section>
+        
+        <section id=sponsors_s class=devel>
+            <a id=sponsors></a>
+            <h1>Sponsors (hide?)</h1>
+            (Dynamic)
+        </section>
+        
+        <section id=countdown_s class=devel>
+            <a id=countdown></a>
+            <h1>When?</h1>
+        </section>
+        
+        <section id=map_s class=devel>
+            <a id=map></a>
+            <h1>Where?</h1>
+        </section>
+        
+        <section id=contact_s class=devel>
+            <a id=contact></a>
+            <h1>Who?</h1>
+        </section>
+        
+        <!-- dynamic objects -->
+        <div id=tooltip></div>
+    </body>
+</html>

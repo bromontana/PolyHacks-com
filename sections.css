@@ -1,0 +1,29 @@
+#main_s {
+    background-color: transparent;
+    text-align: center;
+}
+#qa_s {
+    background-image: url(resources/background2.jpg);
+}
+#whatnow_s {
+    background-image: url(resources/background4.jpg);
+}
+#sponsors_s {
+    background-image: url(resources/background5.jpg);
+}
+#countdown_s {
+    background-image: url(resources/background3.jpg);
+}
+#map_s {
+    background-image: url(resources/background6.jpg);
+}
+#contact_s {
+    background-color: #333;
+    color: white;
+}
+
+
+/* Main */
+#main_s h1 {
+    font-size: 3em;
+}
