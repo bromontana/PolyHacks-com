@@ -27,6 +27,7 @@ $(function() {
 });
 
 // show the tooltip
+// TODO: consider margin, prevent going off of screen
 $(function() {
     $("button.showTooltip").hover(function(event) {
         showTooltip(event.currentTarget,

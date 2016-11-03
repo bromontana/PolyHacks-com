@@ -45,7 +45,8 @@
     top: 65%;
 }
 #main_s > #buttons > button {
-    margin: auto 10pt;
+    margin: 3pt 10pt;
+    font-size: 20pt;
 }
 
 
