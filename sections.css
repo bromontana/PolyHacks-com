@@ -92,7 +92,7 @@
     margin-top: 1em;
     margin-left: 0.5em;
     
-    transition: line-height .4s, color .4s, font-size .4s;
+    transition: line-height .4s, color .4s, font-size .4s, margin .4s, margin-left .4s, margin-top .4s;
 }
 .faq.show > .question::after {
     transform: rotate(-180deg);
