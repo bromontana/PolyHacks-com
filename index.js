@@ -7,13 +7,19 @@ $(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
                 var top = target.offset().top;
-                if (target.selector == "#main") top = 0;
-                    $('html, body').animate({
-                        scrollTop: top
-                    }, SCROLL_DUR);
-                    return false;
+                if (target.selector == "#main") {
+                    top = 0;
+                    target.selector = "";
                 }
+                $('html, body').animate({
+                    scrollTop: top
+                }, SCROLL_DUR);
+                setTimeout(function() {
+                    document.location.hash = target.selector;
+                }, SCROLL_DUR);
+                return false;
             }
+        }
     });
     $('a[href="#"]').click(function(event) {
         event.preventDefault();
@@ -68,4 +74,11 @@ $(function() {
         // if you get here, you're at the bottom of the page
         $("a#dropdown").prev().addClass("current");
     }
+});
+
+// show/hide FAQ questions
+$(function() {
+    $(".faq > .question").click(function(event) {
+        $(event.currentTarget).parent().toggleClass("show");
+    });
 });

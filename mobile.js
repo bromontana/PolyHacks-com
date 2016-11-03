@@ -1,18 +1,21 @@
 $(function() {
-    $("#dropdown").click(showNavBar);
+    $("#dropdown").bind("click", showNavBar);
     function showNavBar() {
-        $("#navbar").addClass("showing").unbind("click", showNavBar);
+        $("#navbar").addClass("showing");
+        $("#dropdown").unbind("click", showNavBar);
         $("#navbar > a:not(#dropdown)").addClass("animate");
         setTimeout(function() {
-            $("*").click(hideNavBar);
+            $(document.body).bind("click", hideNavBar);
+            $("#navbar > a").bind("click", hideNavBar);
         }, 1);
     }
     function hideNavBar() {
         $("#navbar").removeClass("showing");
         $("#navbar > a:not(#dropdown)").addClass("animate");
-        $("*").unbind("click", hideNavBar);
+        $(document.body).unbind("click", hideNavBar);
+        $("#navbar > a").unbind("click", hideNavBar);
         setTimeout(function() {
-            $("#dropdown").click(showNavBar);
+            $("#dropdown").bind("click", showNavBar);
         }, 1);
     }
     

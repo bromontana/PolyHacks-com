@@ -36,6 +36,7 @@ section {
 }
 section h1 {
     font-size: 2em;
+    text-align: center;
 }
 nav {
     width: 100%;
@@ -197,4 +198,11 @@ footer#copyright > a {
     visibility: hidden;
     height: 0;
     padding: 0;
+}
+
+@media screen and (min-aspect-ratio: 700/200) {
+    body {
+        color: green;
+        background-size: 100% auto;
+    }
 }
