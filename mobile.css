@@ -1,0 +1,47 @@
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        background-attachment: scroll;
+    }
+    nav:not(.hidden) {
+        width: 100%;
+        flex-direction: column;
+        text-align: right;
+        justify-content: flex-end;
+    }
+    nav:not(.hidden) > a {
+        text-align: right;
+        padding-right: 20px;
+        box-sizing: border-box;
+        font-size: 20pt;
+        line-height: 65px;
+    }
+    nav:not(.hidden) > a:not(#dropdown) {
+        opacity: 0;
+        pointer-events: none;
+        height: 0;
+    }
+    nav:not(.hidden) > a:not(#dropdown).animate {
+        transition: height .5s, opacity .4s;
+    }
+    nav:not(.hidden).showing > a:not(#dropdown) {
+        pointer-events: all;
+        height: 65px;
+        opacity: 1;
+    }
+    nav > a#dropdown {
+        height: 65px;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        width: 350px;
+    }
+}

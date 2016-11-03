@@ -19,24 +19,46 @@
               rel="stylesheet">
         <link rel=stylesheet href=styles.css>
         <link rel=stylesheet href=sections.css>
+        <link rel=stylesheet href=mobile.css>
+        <link rel=stylesheet href=scrollbars.css>
         
         <script src=jquery.min.js></script>
         <script src=index.js></script>
+        <script src=mobile.js></script>
     </head>
     <body>
-        <nav>
-            <a href=#main>Main</a>
-            <a href=#qa>Q&amp;A</a>
-            <a href=#whatnow>What Now?</a>
-            <a href=#sponsors>Sponsors</a>
-            <a href=#countdown>Countdown</a>
-            <a href=#map>Where?</a>
-            <a href=#contact>Contact</a>
+        <nav id=navbar>
+            <a href=#main class=current>
+                <span>Home<div class=bar></div></span>
+            </a>
+            <a href=#qa>
+                <span>Q&amp;A<div class=bar></div></span>
+            </a>
+            <a href=#whatnow>
+                <span>What Now?<div class=bar></div></span>
+            </a>
+            <a href=#sponsors>
+                <span>Sponsors<div class=bar></div></span>
+            </a>
+            <a href=#countdown>
+                <span>Countdown<div class=bar></div></span>
+            </a>
+            <a href=#map>
+                <span>Where?<div class=bar></div></span>
+            </a>
+            <!--<a href=#contact>
+                <span>Contact<div class=bar></div></span>
+            </a>-->
+            <a href=# id=dropdown class=mobile>
+                <img src=resources/hamburger.png
+                     alt="Click to show links"
+                     width=20 height=20>
+            </a>
         </nav>
         <nav class=hidden><a href="#">d</a></nav>
         
         <section id=main_s>
-            <a id=main></a>
+            <a id=main class=navLink></a>
             <h1>POLYHACKS</h1>
             <p>PolyHacks will be on March 24th-25th</p>
             <br>
@@ -57,38 +79,61 @@
         </section>
         
         <section id=qa_s class=devel>
-            <a id=qa></a>
+            <a id=qa class=navLink></a>
             <h1>Q&amp;A</h1>
             (Dynamic)
         </section>
         
         <section id=whatnow_s class=devel>
-            <a id=whatnow></a>
+            <a id=whatnow class=navLink></a>
             <h1>What Now?</h1>
         </section>
         
         <section id=sponsors_s class=devel>
-            <a id=sponsors></a>
+            <a id=sponsors class=navLink></a>
             <h1>Sponsors (hide?)</h1>
             (Dynamic)
+            Florida Polytechnic University
+            <br>
+            SGA
+            <br>
+            SHAPE
+            <br>
+            MLH
+            <br>
+            Others
         </section>
         
         <section id=countdown_s class=devel>
-            <a id=countdown></a>
+            <a id=countdown class=navLink></a>
             <h1>When?</h1>
         </section>
         
         <section id=map_s class=devel>
-            <a id=map></a>
+            <a id=map class=navLink></a>
             <h1>Where?</h1>
         </section>
         
         <section id=contact_s class=devel>
-            <a id=contact></a>
+            <a id=contact class=navLink></a>
             <h1>Who?</h1>
         </section>
         
+        <footer id=copyright>
+            <a href="https://github.com/PrivacyPolicy/PolyHacks-com"
+               target=_blank>&copy; Gabriel Hutchison</a>
+        </footer>
+        
         <!-- dynamic objects -->
-        <div id=tooltip></div>
+        <div id=tooltip class=hidden></div>
+        
+        <script>
+        // add temporary filler text
+        $("section.devel").append("\
+                <p>Bacon ipsum dolor amet sausage cow beef kielbasa short loin, hamburger jerky pork pastrami ground round tenderloin shank fatback shankle doner. Capicola pork chop corned beef, prosciutto salami ground round bacon short ribs brisket tail chicken turducken kevin andouille porchetta. Venison picanha jerky filet mignon shank leberkas ball tip short loin capicola. Doner sausage ball tip, landjaeger tenderloin andouille burgdoggen short loin pork spare ribs flank. T-bone pork loin meatloaf, ham hock chuck tail pork belly fatback tongue beef salami. Shankle sirloin pastrami, t-bone pancetta ham porchetta salami jowl prosciutto. Bacon picanha venison tri-tip burgdoggen spare ribs strip steak kevin biltong.</p>\
+                <p>Ham hock venison fatback porchetta burgdoggen meatball. Shoulder shank ham venison andouille meatball flank. Kielbasa pork loin ground round chicken shank pancetta. Boudin bacon fatback, cupim jowl leberkas pig shankle. Ground round t-bone rump tongue. Pork loin bacon jowl, pork belly tongue fatback biltong salami doner beef ribs. Burgdoggen hamburger short ribs, chicken chuck doner meatloaf spare ribs boudin frankfurter venison porchetta ball tip ham hock jowl.</p>\
+                <p>Prosciutto filet mignon burgdoggen salami, kevin cupim bresaola flank shank. Kevin pork chop kielbasa short ribs tail turkey. Bacon pork chop prosciutto drumstick, shoulder capicola porchetta. Biltong swine pastrami, shank beef ribs corned beef tri-tip jowl. Venison swine capicola porchetta ham hock chuck. Jowl corned beef bacon spare ribs venison boudin. Jerky porchetta short loin ham chuck leberkas flank pork belly, bresaola kevin cow.</p>"
+                           );
+        </script>
     </body>
 </html>

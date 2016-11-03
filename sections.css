@@ -3,19 +3,19 @@
     text-align: center;
 }
 #qa_s {
-    background-image: url(resources/background2.jpg);
+    background-color: lime;
 }
 #whatnow_s {
-    background-image: url(resources/background4.jpg);
+    background-color: pink;
 }
 #sponsors_s {
-    background-image: url(resources/background5.jpg);
+    background-color: lime;
 }
 #countdown_s {
-    background-image: url(resources/background3.jpg);
+    background-color: pink;
 }
 #map_s {
-    background-image: url(resources/background6.jpg);
+    background-color: lime;
 }
 #contact_s {
     background-color: #333;
@@ -26,4 +26,12 @@
 /* Main */
 #main_s h1 {
     font-size: 3em;
+}
+#main_s {
+    padding: 0;
+}
+#main_s > p {
+    width: 100%;
+    padding: 2em 0;
+    background: lime;
 }
