@@ -1,0 +1,23 @@
+<images>
+    <image>
+        <src>mlh.png</src>
+        <href>https://mlh.io/</href>
+        <alt>Major League Hacking</alt>
+        <order>2</order>
+        <size>1</size>
+    </image>
+    <image>
+        <src>fpu_sga.jpg</src>
+        <href>https://floridapolytechnic.org/get-involved/student-government-association/</href>
+        <alt>Florida Polytechnic University SGA</alt>
+        <order>1</order>
+        <size>1</size>
+    </image>
+    <image>
+        <src>GitHub-Logo.png</src>
+        <href>https://github.com/</href>
+        <alt>GitHub</alt>
+        <order>3</order>
+        <size>2</size>
+    </image>
+</images>
