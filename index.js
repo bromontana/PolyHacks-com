@@ -27,23 +27,23 @@ $(function() {
 });
 
 // show the tooltip
-// TODO: consider margin, prevent going off of screen
+// TODO: prevent going off of scree
 $(function() {
-    $("button.showTooltip").hover(function(event) {
-        showTooltip(event.currentTarget,
-                    event.currentTarget.getAttribute("tooltip"));
-        
-        $(event.currentTarget).mouseout(mouseOut);
-        function mouseOut(event) {
+    $(".showTooltip").hover(function(event) {
+        console.log(event.type);
+        if (event.type === "mouseenter") {
+            showTooltip(event.currentTarget,
+                        event.currentTarget.getAttribute("tooltip"));
+        } else {
             hideTooltip();
-            $(event.currentTarget).unbind("mouseout", mouseOut);
         }
     });
     function showTooltip(elem, text) {
         const MARGIN = 5;
         $elem = $(elem);
         var y = $elem.offset().top + $elem.outerHeight(true);
-        var x = $elem.offset().left + $elem.outerWidth(true) / 2;
+        var x = $elem.offset().left + $elem.outerWidth(true) / 2 -
+            parseInt($elem.css("margin-left"));
         $("#tooltip")
             .text(text)
             .css({top: (y + MARGIN) + "px",
@@ -68,7 +68,6 @@ $(function() {
                 var id = $("a.navLink").eq(i - 1).attr("id");
                 $("nav > a").removeClass("current");
                 $("nav > a[href='#" + id + "']").addClass("current");
-                //console.log(id);
                 return;
             }
         }
@@ -82,4 +81,48 @@ $(function() {
     $(".faq > .question").click(function(event) {
         $(event.currentTarget).parent().toggleClass("show");
     });
+});
+
+// countdown timer and click button
+$(function() {
+    $("#bigRedButton").click(function(event) {
+        // push data to server
+        $.ajax({
+            dataType: "text",
+            url: "add_click.php",
+            method: "GET",
+            success: function(data, status) {
+                if (data == "failure") {
+                    alert("I COULD NOT UPLOAD A BUTTON CLICKS");
+                } else {
+                    setValue(data);
+                    console.log("Added one click to the many, many clicks.");
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert("I COULD NOT UPLOAD 1 BUTTON CLICKS");
+                console.error(errorThrown);
+            }
+        });
+    });
+    function setValue(val) {
+        var valInt = parseInt(val);
+        var goalInt = parseInt($("#goal").text().split(",").join(""));
+        if (valInt > goalInt) {
+            document.location.reload();
+        }
+        $("#buttonPresses").text(commaFormatted(val));
+    }
+    function commaFormatted(amount) {
+        const DELIM = ',';
+        amount = amount + "";
+        var newAmount = "";
+        for (var i = amount.length - 1; i >= 0; i--) {
+            newAmount = amount[i] + newAmount;
+            if ( (amount.length - i) % 3 == 0) {
+                newAmount = DELIM + newAmount;
+            }
+        }
+        return (newAmount[0] == DELIM) ? newAmount.substr(1) : newAmount;
+    }
 });

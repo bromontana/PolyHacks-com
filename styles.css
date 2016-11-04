@@ -1,4 +1,5 @@
 /* TODO fix white bar on IOS */
+/* TODO: fix positions of links on IOS */
 html {
     height: 100%;
 }
@@ -25,6 +26,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    font-size: 1.2em;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 section {
     width: 100%;
@@ -38,15 +42,32 @@ section {
 section h1 {
     font-size: 2em;
     text-align: center;
+    text-transform: uppercase;
+}
+#mlhBanner {
+    display: block;
+    background: url(resources/mlh_banner.png);
+    width: 12vw;
+    height: 21.3vw;
+    position: relative;
+    top: 76px;
+    right: 10px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    z-index: 1;
+    top: calc(10vw + 5px);
 }
 nav {
     width: 100%;
     border-bottom: 5px solid red;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background: black;
     color: white;
     display: flex;
+    text-transform: uppercase;
 }
 nav.hidden {
     position: relative;
@@ -95,6 +116,9 @@ nav > a.current:not(:hover) .bar {
         font-size: calc(1000px * 0.02);
         line-height: calc(1000px * 0.1);
         height: calc(1000px * 0.1);
+    }
+    #mlhBanner {
+        top: calc(1000px * 0.1 + 4px);
     }
 }
 
@@ -180,7 +204,7 @@ footer#copyright > a {
 
 #tooltip {
     height: 1em;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .7);
     border-radius: 2px;
     -webkit-user-select: none;
     user-select: none;
@@ -192,7 +216,7 @@ footer#copyright > a {
     line-height: 1em;
     white-space: nowrap;
     
-    transition: opacity .1s, visibility .1s;
+    transition: opacity .1s, visibility .1s, padding .2s;
 }
 #tooltip.hidden {
     opacity: 0;
@@ -206,4 +230,40 @@ footer#copyright > a {
         color: green;
         background-size: 100% auto;
     }
+}
+
+li {
+    padding: .4em;
+    text-transform: uppercase;
+}
+
+
+/* Sponsor images */
+#sponsorImgs {
+    text-align: center;
+}
+a.sponsorImg {
+    display: inline-block;
+    margin: 2vw;
+}
+a.sponsorImg.priority1 {
+    max-width: 35vw;
+}
+a.sponsorImg.priority2 {
+    max-width: 20vw;
+}
+a.sponsorImg.priority3 {
+    max-width: 15vw;
+}
+a.sponsorImg > img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#bigRedButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
 }

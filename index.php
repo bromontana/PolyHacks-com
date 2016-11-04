@@ -10,7 +10,7 @@
         <meta name=author content="Gabriel Hutchison">
         
         <meta name="viewport" content="width=device-width,
-            initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+            initial-scale=1.5,maximum-scale=1.0,user-scalable=no">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="mobile-web-app-capable" content="yes">
@@ -25,6 +25,7 @@
         <script src=jquery.min.js></script>
         <script src=index.js></script>
         <script src=mobile.js></script>
+        <script src=barrelroll.js></script>
     </head>
     <body>
         <nav id=navbar>
@@ -37,11 +38,11 @@
             <a href=#whatnow>
                 <span>What Now?<div class=bar></div></span>
             </a>
-            <a href=#sponsors>
-                <span>Sponsors<div class=bar></div></span>
-            </a>
             <a href=#countdown>
                 <span>Countdown<div class=bar></div></span>
+            </a>
+            <a href=#sponsors>
+                <span>Sponsors<div class=bar></div></span>
             </a>
             <a href=#map>
                 <span>Where?<div class=bar></div></span>
@@ -57,10 +58,18 @@
         </nav>
         <nav class=hidden><a href="#">d</a></nav>
         
+        <a id=mlhBanner
+           href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white"
+           target=_blank></a>
+        
         <section id=main_s>
             <a id=main class=navLink></a>
             <h1>POLYHACKS</h1>
-            <p>PolyHacks will be on March 24th-25th</p>
+            <p>
+                PolyHacks will be on March 24th-25th
+                <br><br>
+                Register by January 3rd!
+            </p>
             <br>
             <div id=buttons>
                 <button id=btnRegister class=showTooltip
@@ -91,14 +100,57 @@
             </div>
         </section>
         
-        <section id=whatnow_s class=devel>
+        <section id=whatnow_s>
             <a id=whatnow class=navLink></a>
             <h1>What Now?</h1>
+            <ul>
+                <li>Make sure to register</li>
+                <li>Come up with a hack</li>
+                <li>Read the <a href="https://polyhacks.com/2016/pdf/mlh-code-of-conduct.pdf" target=_blank>code of conduct</a></li>
+                <li> Prepare for a <span class=showTooltip
+                    tooltip="Ask your doctor if caffeine is right for you">
+                    caffeine</span> overdose</li>
+            </ul>
         </section>
         
-        <section id=sponsors_s class=devel>
+        <section id=countdown_s class=devel>
+            <a id=countdown class=navLink></a>
+            <h1>When?</h1>
+            <div id=button>
+                <div id=bigRedButton></div>
+                <b><span id=buttonPresses>
+<?php
+    $num = (int) file_get_contents("clicks.txt");
+    echo number_format($num . "");
+?>
+                    </span> button presses</b>
+                <div>
+<?php
+    $str = "Everybody try to get <span id=goal>500</span> clicks!";
+    if ($num > 500) $str = "It's working! Keep clicking for button-related puns! (next goal: <span id=goal>1500</span>)";
+    if ($num > 1500) $str = "You guys are pressing me out. (next: <span id=goal>2500</span>)"; 
+    if ($num > 2500) $str = "I'm hard pressed to show you these numbers. (<span id=goal>3500</span>)";
+    if ($num > 3500) $str = "I'm part of an important click now. (<span id=goal>4500</span>)";
+    if ($num > 4500) $str = "It's a very <i>PRESS-tigious</i> click. (<span id=goal>6500</span>)";
+    if ($num > 6500) $str = "I'm wearing my best button-up shirt for my date tonight. (<span id=goal>8500</span>)";
+    if ($num > 8500) $str = "Oh boy is she cute as a button, I can't wait! (<span id=goal>10,000</span>)";
+    if ($num > 10000) $str = "Nevermind. I dumped that switch. She kept pushing my buttons. (<span id=goal>50,000</span>)";
+    if ($num > 50000) $str = "Stop clicking me, I'm kinda <i>de-PRESSED</i> right now. (<span id=goal>75,000</span>)";
+    if ($num > 75000) $str = "Seriously, you're such a pain in the button. (<span id=goal>100,000</span>)";
+    if ($num > 100000) $str = "I didn't honestly expect you all to get this far. Next goal: (<span id=goal>1,000,000</span>)";
+    if ($num > 1000000) $str = "Umm, you must really like clicking. You all deserve some kind of reward I guess...
+                                <a href=\"https://www.google.com/maps/@51.4921374,-0.1928784,3a,75y,291.8h,71.14t/data=!3m7!1e1!3m5!1sc9UMhWP_MWm9U0L48xEjYw!2e0!3e5!7i13312!8i6656\"
+                                target=_blank>Here's the TARDIS on Google Maps</a> (you can actually get inside it. And yes, it's bigger on the inside). Is that good enough?
+                                <span id=goal style=\"display: none;\">100000000000</span>";
+    echo $str;
+?>
+                </div>
+            </div>
+        </section>
+        
+        <section id=sponsors_s>
             <a id=sponsors class=navLink></a>
-            <h1>Sponsors (hide?)</h1>
+            <h1>Sponsors</h1>
             (Dynamic)
             Florida Polytechnic University
             <br>
@@ -109,11 +161,42 @@
             MLH
             <br>
             Others
-        </section>
-        
-        <section id=countdown_s class=devel>
-            <a id=countdown class=navLink></a>
-            <h1>When?</h1>
+            php load data images with alts
+            <div id=sponsorImgs>
+<?php
+    $file = file_get_contents("resources/sponsors/images.xml");
+    if ($file) {
+        try {
+            $xml = simplexml_load_string($file);
+            $json = json_encode($xml);
+            $array = json_decode($json, TRUE)["image"];
+            
+            function sortByOrder($a, $b) {
+                if ($a["order"] == $b["order"]) return 0;
+                return ($a["order"] < $b["order"]) ? -1 : 1;
+            }
+            
+            // sort by 'order' value
+            uasort($array, 'sortByOrder');
+            
+            foreach($array as $img) {
+                $sponsorImg ="
+                    <a class=\"sponsorImg priority{$img["size"]}\" target=_blank
+                        href=\"{$img["href"]}\">
+                        <img src=\"resources/sponsors/{$img["src"]}\"
+                             alt=\"{$img["alt"]}\">
+                    </a>
+                ";
+                echo $sponsorImg;
+            }
+        } catch (Exception $e) {
+            echo "<h3>PHP Error: {$e->getMessage()}</h3>";
+        }
+    } else {
+        echo "<h3 class=showTooltip tooltip=\"Or error...\">No sponsors!</h3>";
+    }
+?>
+            </div>
         </section>
         
         <section id=map_s class=devel>
@@ -123,7 +206,7 @@
         
         <section id=contact_s class=devel>
             <a id=contact class=navLink></a>
-            <h1>Who?</h1>
+            <h1>Contact</h1>
         </section>
         
         <footer id=copyright>

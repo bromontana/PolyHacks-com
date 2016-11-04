@@ -1,6 +1,7 @@
 #main_s {
     background-color: transparent;
     text-align: center;
+    overflow: hidden;
 }
 #qa_s {
     background-color: lime;
@@ -8,10 +9,10 @@
 #whatnow_s {
     background-color: pink;
 }
-#sponsors_s {
+#countdown_s {
     background-color: lime;
 }
-#countdown_s {
+#sponsors_s {
     background-color: pink;
 }
 #map_s {
@@ -28,7 +29,7 @@
     padding: 0;
 }
 #main_s h1 {
-    padding-top: 30pt;
+    padding-top: 35pt;
     font-size: 3em;
 }
 #main_s > p {
@@ -36,7 +37,7 @@
     padding: 2em 0;
     background: lime;
     position: absolute;
-    top: 30%;
+    top: 35%;
 }
 #main_s > #buttons {
     position: absolute;
@@ -70,9 +71,9 @@
 .faq > .question {
     cursor: pointer;
     text-decoration: none;
-    font-size: 15pt;
+    font-size: 20pt;
     padding: 15pt 0 1em;
-    line-height: 25pt;
+    line-height: 30pt;
 }
 .faq > .question::after {
     content: "\25bc";
@@ -98,8 +99,8 @@
     transform: rotate(-180deg);
 }
 .faq.show > .answer {
-    font-size: 10pt;
-    line-height: 10pt;
+    font-size: 13pt;
+    line-height: 13pt;
     color: inherit;
 }
 
