@@ -44,6 +44,15 @@
     #mlhBanner {
         top: 70px;
     }
+    
+    .social {
+        width: 52px;
+        height: 52px;
+        font-size: 26px !important;
+    }
+    .social:before {
+        line-height: 52px;
+    }
 }
 
 @media screen and (max-width: 375px) {

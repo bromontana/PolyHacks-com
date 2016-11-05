@@ -37,7 +37,7 @@ section {
     position: relative;
     background-position: center !important;
     background-size: auto 100% !important;
-    background-color: white;
+/*    background-color: white;*/
 }
 section h1 {
     font-size: 2em;
@@ -61,11 +61,12 @@ section h1 {
 }
 nav {
     width: 100%;
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid;
+/*    border-color: red;*/
     position: fixed;
     z-index: 2;
-    background: black;
-    color: white;
+/*    background: black;*/
+/*    color: white;*/
     display: flex;
     text-transform: uppercase;
 }
@@ -76,14 +77,14 @@ nav.hidden {
 }
 nav > a {
     position: relative;
-    background: rgba(0, 255, 0, .3);
+/*    background: rgba(0, 255, 0, .3);*/
     width: 100%;
     font-size: 2vw;
     line-height: 10vw;
     height: 10vw;
     text-align: center;
     
-    color: white;
+/*    color: white;*/
     text-decoration: none;
     -webkit-user-select: none;
     user-select: none;
@@ -95,7 +96,7 @@ nav > a > span {
 }
 nav > a .bar {
     position: absolute;
-    background: white;
+/*    background: white;*/
     height: 2px;
     top: calc(50% + .5 * 13pt + 5px);
     width: 100%;
@@ -128,7 +129,7 @@ a.navLink {
     display: block;
     width: 40px;
     height: 40px;
-    background: pink;
+/*    background: pink;*/
     height: 0;
 }
 a#dropdown > img {
@@ -153,14 +154,15 @@ a#dropdown > img {
 }
 
 #qa_s, #sponsors_s, #map_s {
-    background: white;
+/*    background: white;*/
 }
 
 /* Button overrides */
 button {
-    background: #492f92;
-    border: 1px solid #fff;
-    color: white;
+/*    background: #492f92;*/
+    border: 1px solid;
+/*    border-color: #fff;*/
+/*    color: white;*/
     font-family: 'Ubuntu', sans-serif;
     padding: .4em;
     font-size: 12pt;
@@ -168,20 +170,21 @@ button {
     transition: background .2s, color .05s;
 }
 button:disabled {
-    color: lightgray;
-    background: #7a5dcb;
-    border-color: lightgray;
+/*    color: lightgray;*/
+/*    background: #7a5dcb;*/
+/*    border-color: lightgray;*/
 }
 button:hover:not(:disabled) {
-    background: #1d6a9a;
+/*    background: #1d6a9a;*/
     cursor: pointer;
 }
 button:focus {
-    border-color: #9CF;
-    outline: 2px solid #9CF;
+/*    border-color: #9CF;*/
+    outline: 2px solid;
+/*    outline-color: #9CF;*/
 }
 button:active {
-    color: grey;
+/*    color: grey;*/
 }
 
 a {
@@ -194,8 +197,8 @@ footer#copyright {
     width: 100%;
     height: 100px;
     line-height: 100px;
-    background: black;
-    color: white;
+/*    background: black;*/
+/*    color: white;*/
     text-decoration: none;
 }
 footer#copyright > a {
@@ -227,7 +230,7 @@ footer#copyright > a {
 
 @media screen and (min-aspect-ratio: 700/200) {
     body {
-        color: green;
+/*        color: green;*/
         background-size: 100% auto;
     }
 }
@@ -259,11 +262,4 @@ a.sponsorImg > img {
     width: 100%;
     height: 100%;
     vertical-align: middle;
-}
-
-#bigRedButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: red;
 }

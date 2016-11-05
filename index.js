@@ -30,7 +30,6 @@ $(function() {
 // TODO: prevent going off of scree
 $(function() {
     $(".showTooltip").hover(function(event) {
-        console.log(event.type);
         if (event.type === "mouseenter") {
             showTooltip(event.currentTarget,
                         event.currentTarget.getAttribute("tooltip"));
@@ -60,6 +59,7 @@ $(function() {
     $(document).scroll(updateNavBar);
     updateNavBar();
     function updateNavBar() {
+        $("#mapCover").addClass("preventScroll");
         const MARGIN = 100;
         var i = 0, offset, scrollY = window.pageYOffset;
         while (offset = $("a.navLink").eq(++i).offset()) {
@@ -83,7 +83,42 @@ $(function() {
     });
 });
 
-// countdown timer and click button
+// countdown timer
+$(function() {
+    var endDate = new Date();
+    var data = JSON.parse($("#countdownTimer").attr("data-to"));
+    endDate.setFullYear(data.yr);
+    endDate.setMonth(data.mo - 1);
+    endDate.setDate(data.day);
+    endDate.setHours(data.hr);
+    endDate.setMinutes(data.min);
+    endDate.setSeconds(data.sec);
+    endDate.setMilliseconds(data.ms);
+    var interval = setInterval(function() {
+        var curDate = new Date();
+        //console.log("%O ?< %O", endDate, curDate);
+        if (endDate > curDate) {
+            var data = Date.DateDiff(curDate, endDate);
+            var days = data.d;
+            var hours = data.h % 24;
+            var mins = data.n % 60;
+            var secs = data.s % 60;
+            
+            $("#countdownTimer").text(
+                days + " days : " +
+                hours + " hrs : " +
+                mins + " mins : " +
+                secs + " secs"
+            );
+        } else {
+            clearInterval(interval);
+            $("#countdownTimer").text(
+                $("#countdownTimer").attr("data-past"));
+        }
+    }, 1000);
+});
+
+// click button
 $(function() {
     $("#bigRedButton").click(function(event) {
         // push data to server
@@ -125,4 +160,11 @@ $(function() {
         }
         return (newAmount[0] == DELIM) ? newAmount.substr(1) : newAmount;
     }
+});
+
+// prevent scrolling from working on the Google Map
+$(function() {
+    $("#mapCover").click(function(event) {
+        $("#mapCover").removeClass("preventScroll");
+    });
 });

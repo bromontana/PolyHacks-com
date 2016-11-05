@@ -1,0 +1,19 @@
+{
+    "yr": "2017",
+    "mo": "3",
+    "day": "24",
+    "hr": "12",
+    "min": "0",
+    "sec": "0",
+    "ms": "0"
+}
+
+/*
+    yr: full year of event (yyyy)
+    mo: month of event (1-12)
+    day: day of event (1-31)
+    hr: hour that event starts (0-23)
+    min: minute that event starts (0-59)
+    sec: second that event starts (0-59)
+    ms: millisecond that event starts (0-999)
+*/
