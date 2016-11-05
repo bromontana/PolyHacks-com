@@ -55,6 +55,15 @@
         top: 70px;
     }
     
+    .faq > .question {
+        font-size: 26px;
+        line-height: 45.5px;
+    }
+    .faq.show > .answer {
+        font-size: 13px;
+        line-height: 13px;
+    }
+    
     .social {
         width: 52px;
         height: 52px;
