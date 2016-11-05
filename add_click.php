@@ -1,20 +1,20 @@
 <?php
 
-// error handler
-function customError($errno, $errstr) {
-    echo "<b>Error:</b> [$errno] $errstr";
-}
-
-set_error_handler("customError");
+$filename = "clicks.txt";
+$failure = "failure";
 
 try {
-    $num = (int) file_get_contents("clicks.txt");
-    $num++;
-    $success = file_put_contents("clicks.txt", $num + "");
-    if ($success) {
-        echo $num + "";
-    } else {
-        echo "failure";
+	$num = file_get_contents($filename);
+	$num++;
+	if (is_writeable($filename)) {
+		if (file_put_contents($filename, $num . "")) {
+			echo $num . "";
+		} else {
+			echo $failure;
+		}
+	} else {
+		echo $failure;
+	}
 } catch (Exception $e) {
-    echo "failure";
+	echo $failure;
 }
