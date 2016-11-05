@@ -1,34 +1,92 @@
-color: black;
-color: white;
-color: #D494E5;
-color: #EB87B0;
-color: #F07E83;
-color: #F3A271;
-color: #F3F39E;
+nothingHasThisTagImPrettySure {
+    color: black;
+}
+nothingHasThisTagImPrettySure {
+    color: white;
+}
+uuuuuuuuuuuuuuuuuu {
+    color: #D494E5;
+}
+uuuuuuuuuuuuuuuuuu {
+    color: #EB87B0;
+}
+nothingHasThisTagImPrettySure {
+    color: #F07E83;
+}
+nothingHasThisTagImPrettySure {
+    color: #F3A271;
+}
+html, body, button  {
+    color: #F3F39E;
+}
 
 
-border-color: black;
-border-color: white;
-border-color: #D494E5;
-border-color: #EB87B0;
-border-color: #F07E83;
-border-color: #F3A271;
-border-color: #F3F39E;
 
 
-background-color: black;
-background-color: white;
-background-color: #D494E5;
-background-color: #EB87B0;
-background-color: #F07E83;
-background-color: #F3A271;
-background-color: #F3F39E;
+nothingHasThisTagImPrettySure {
+    background-color: black;
+}
+nothingHasThisTagImPrettySure {
+    background-color: white;
+}
+#theEmailLink:hover, #navbar, #main_s > p, button:hover,
+#whatnow_s, #sponsors_s{
+    background-color: #D494E5;
+}
+#qa_s, #countdown_s, #map_s {
+    background-color: #EB87B0;
+}
+#contact_s {
+    background-color: #F07E83;
+}
+ {
+    background-color: #F3A271;
+}
+.bar {
+    background-color: #F3F39E;
+}
 
 
-outline-color: black;
-outline-color: white;
-outline-color: #D494E5;
-outline-color: #EB87B0;
-outline-color: #F07E83;
-outline-color: #F3A271;
-outline-color: #F3F39E;
+
+
+nothingHasThisTagImPrettySure {
+    border-color: black;
+}
+nothingHasThisTagImPrettySure {
+    border-color: white;
+}
+gkughkujhgk {
+    border-color: #D494E5;
+}
+nothingHasThisTagImPrettySure {
+    border-color: #EB87B0;
+}
+nothingHasThisTagImPrettySure {
+    border-color: #F07E83;
+}
+nothingHasThisTagImPrettySure {
+    border-color: #F3A271;
+}
+#navbar, button {
+    border-color: #F3F39E;
+}
+
+
+
+
+
+/* Exceptions */
+#contact_s {
+}
+footer {
+    color: white;
+    background: #000;
+}
+.faq, #countdownTimer, #button {
+    background: rgba(0, 0, 0, .1);
+}
+
+/* Buttons */
+button {
+    background-color: transparent;
+}
