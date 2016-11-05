@@ -26,8 +26,15 @@ $(function() {
     });
 });
 
+
+// respond to button inputs
+$(function() {
+    $("button").click(function(event) {
+        alert("TODO: implement button " + event.currentTarget.id);
+    });
+});
+
 // show the tooltip
-// TODO: prevent going off of scree
 $(function() {
     $(".showTooltip").hover(function(event) {
         if (event.type === "mouseenter") {
