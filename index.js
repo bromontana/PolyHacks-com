@@ -131,7 +131,7 @@ $(function() {
         // push data to server
         $.ajax({
             dataType: "text",
-            url: "add_click.php",
+            url: "add_click.php?cache=" Date.now(),
             method: "GET",
             success: function(data, status) {
                 if (data == "failure") {
