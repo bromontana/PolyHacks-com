@@ -83,12 +83,12 @@ nav > a {
     line-height: 10vw;
     height: 10vw;
     text-align: center;
-    
+
 /*    color: white;*/
     text-decoration: none;
     -webkit-user-select: none;
     user-select: none;
-    
+
     -webkit-transition: background .3s;
     transition: background .3s;
 }
@@ -102,7 +102,7 @@ nav > a .bar {
     top: calc(50% + .5 * 13pt + 5px);
     width: 100%;
     left: 50%;
-    
+
     -webkit-transform: translateX(-50%) scaleX(0);
     transform: translateX(-50%) scaleX(0);
     -webkit-transition: -webkit-transform .3s;
@@ -125,6 +125,7 @@ nav > a.current:not(:hover) .bar {
     }
     #mlhBanner {
         top: calc(1000px * 0.1 + 4px);
+        width: 120px;
     }
 }
 
@@ -172,7 +173,7 @@ button {
     font-family: 'Ubuntu', sans-serif;
     padding: .4em;
     font-size: 12pt;
-    
+
     -webkit-transition: background .2s, color .05s;
     transition: background .2s, color .05s;
 }
@@ -226,7 +227,7 @@ footer#copyright > a {
     padding: .5em;
     line-height: 1em;
     white-space: nowrap;
-    
+
     -webkit-transition: opacity .1s, visibility .1s, padding .2s;
     transition: opacity .1s, visibility .1s, padding .2s;
 }
