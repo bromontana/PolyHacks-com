@@ -130,6 +130,21 @@ $(function() {
     $("#bigRedButton").click(function(event) {
         // allow frequent taps on mobile
         event.preventDefault();
+        sendClickToServer();
+    }).dblclick(function(event) {
+        // allow frequent taps on mobile
+        event.preventDefault();
+        sendClickToServer();
+    }).on("contextmenu", function(event) {
+        // prevent right-click menu from showing up
+        event.preventDefault();
+        sendClickToServer();
+    }).on("touchend", function(event) {
+        // allow frequent taps on mobile
+        event.preventDefault();
+        sendClickToServer();
+    });
+    function sendClickToServer() {
         // push data to server
         $.ajax({
             dataType: "text",
@@ -150,16 +165,7 @@ $(function() {
                 console.error(errorThrown);
             }
         });
-    }).dblclick(function(event) {
-        // allow frequent taps on mobile
-        event.preventDefault();
-    }).on("contextmenu", function(event) {
-        // prevent right-click menu from showing up
-        event.preventDefault();
-    }).on("touchend", function(event) {
-        // allow frequent taps on mobile
-        event.preventDefault();
-    });
+    }
     function setValue(val) {
         var valInt = parseInt(val);
         var goalInt = parseInt($("#goal").text().split(",").join(""));
