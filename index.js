@@ -156,6 +156,9 @@ $(function() {
     }).on("contextmenu", function(event) {
         // prevent right-click menu from showing up
         event.preventDefault();
+    }).on("touchend", function(event) {
+        // allow frequent taps on mobile
+        event.preventDefault();
     });
     function setValue(val) {
         var valInt = parseInt(val);
