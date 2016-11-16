@@ -128,6 +128,8 @@ $(function() {
 // click button
 $(function() {
     $("#bigRedButton").click(function(event) {
+        // allow frequent taps on mobile
+        event.preventDefault();
         // push data to server
         $.ajax({
             dataType: "text",
@@ -135,17 +137,25 @@ $(function() {
             method: "GET",
             success: function(data, status) {
                 if (data == "failure") {
-                    alert("I COULD NOT UPLOAD A BUTTON CLICKS");
+                    console.error("Could not upload button click;"
+                                  + "is there no connection?");
                 } else {
                     setValue(data);
                     console.log("Added one click to the many, many clicks.");
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                alert("I COULD NOT UPLOAD 1 BUTTON CLICKS");
+                console.error("Could not upload button click;"
+                              + "is there no connection?");
                 console.error(errorThrown);
             }
         });
+    }).dblclick(function(event) {
+        // allow frequent taps on mobile
+        event.preventDefault();
+    }).on("contextmenu", function(event) {
+        // prevent right-click menu from showing up
+        event.preventDefault();
     });
     function setValue(val) {
         var valInt = parseInt(val);

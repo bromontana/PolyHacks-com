@@ -127,7 +127,7 @@
     .faq > .question::after {
         display: none;
     }
-    .faq > .answer {
+    .faq > .answer, .faq.show > .answer {
         font-size: 20px;
         line-height: 20px;
         color: inherit;

@@ -95,7 +95,7 @@
             <h1>Q&amp;A</h1>
             <div class=faq>
                 <a href=# class=question>Questiony Question?</a>
-                <div class="answer devel">Answery Answer ans-answer</div>
+                <div class=answer>Answery Answer ans-answer</div>
             </div>
             <div class=faq>
                 <a href=# class=question>Questiony Question?</a>
@@ -141,21 +141,21 @@
                 <div>
 <?php
     $str = "Everybody try to get <span id=goal>500</span> presses!";
-    if ($num > 500) $str = "It's working! Keep clicking for button-related puns! (next goal: <span id=goal>1500</span>)";
-    if ($num > 1500) $str = "You guys are pressing me out. (next: <span id=goal>2500</span>)"; 
-    if ($num > 2500) $str = "I'm hard pressed to show you these numbers. (<span id=goal>3500</span>)";
-    if ($num > 3500) $str = "I'm part of an important click now. (<span id=goal>4500</span>)";
-    if ($num > 4500) $str = "It's a very <i>PRESS-tigious</i> click. (<span id=goal>6500</span>)";
-    if ($num > 6500) $str = "I'm wearing my best button-up shirt for my date tonight. (<span id=goal>8500</span>)";
+    if ($num > 500) $str = "It's working! Keep clicking for button-related puns! (next goal: <span id=goal>1,500</span>)";
+    if ($num > 1500) $str = "You guys are pressing me out. (next: <span id=goal>2,500</span>)"; 
+    if ($num > 2500) $str = "I'm hard pressed to show you these numbers. (<span id=goal>3,500</span>)";
+    if ($num > 3500) $str = "I'm part of an important click now. (<span id=goal>4,500</span>)";
+    if ($num > 4500) $str = "It's a very <i>PRESS-tigious</i> click. (<span id=goal>6,500</span>)";
+    if ($num > 6500) $str = "I'm wearing my best button-up shirt for my date tonight. (<span id=goal>8,500</span>)";
     if ($num > 8500) $str = "Oh boy is she cute as a button, I can't wait! (<span id=goal>10,000</span>)";
     if ($num > 10000) $str = "Nevermind. I dumped that switch. She kept pushing my buttons. (<span id=goal>50,000</span>)";
     if ($num > 50000) $str = "Stop clicking me, I'm kinda <i>de-PRESSED</i> right now. (<span id=goal>75,000</span>)";
     if ($num > 75000) $str = "Seriously, you're such a pain in the button. (<span id=goal>100,000</span>)";
     if ($num > 100000) $str = "I didn't honestly expect you all to get this far. Next goal: (<span id=goal>1,000,000</span>)";
     if ($num > 1000000) $str = "Umm, you must really like clicking. You all deserve some kind of reward I guess...
-                                <a href=\"https://www.google.com/maps/@51.4921374,-0.1928784,3a,75y,291.8h,71.14t/data=!3m7!1e1!3m5!1sc9UMhWP_MWm9U0L48xEjYw!2e0!3e5!7i13312!8i6656\"
-                                target=_blank>Here's the TARDIS on Google Maps</a> (you can actually get inside it. And yes, it's bigger on the inside). Is that good enough?
-                                <span id=goal style=\"display: none;\">100000000000</span>";
+                                <a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"
+                                target=_blank>Here's the source of my inspiration for button puns.</a> Honestly, this video has gotten me through a lot.
+                                <span id=goal style=\"display: none;\">1,000,000,000,000</span>";
     echo $str;
 ?>
                 </div>
