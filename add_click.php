@@ -4,7 +4,7 @@ $filename = "clicks.txt";
 $failure = "failure";
 
 try {
-	$num = file_get_contents($filename);
+	$num = (int)file_get_contents($filename);
 	$num++;
 	if (is_writeable($filename)) {
 		if (file_put_contents($filename, $num . "")) {
