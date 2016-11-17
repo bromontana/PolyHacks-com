@@ -3,27 +3,28 @@
     <head>
         <meta charset=utf-8>
         <title>PolyHacks - Florida Polytechnic University's Hackathon</title>
-        
+
 		<link rel="shortcut icon" href=resources/favicon.png />
         <meta name=description content="Florida Polytechnic University's Student Hackathon">
         <meta name=keywords content="florida,polytechnic,university,hackathon,poly,fl,flpoly,polyhacks,hack,programming,coding,code,event,major,league,hacking,mlh,stem,science,technology,engineering,mathematics,math,you,get,it">
         <meta name=author content="Gabriel Hutchison">
-        
+
         <meta name="viewport" content="width=device-width,
             initial-scale=1.5,maximum-scale=1.0,user-scalable=no">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="mobile-web-app-capable" content="yes">
-        
-        <link href="https://fonts.googleapis.com/css?family=Roboto"
-              rel="stylesheet">
+
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto"
+              rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link rel=stylesheet href=styles.css>
         <link rel=stylesheet href=colors.css>
         <link rel=stylesheet href=sections.css>
         <link rel=stylesheet href=mobile.css>
         <link rel=stylesheet href=scrollbars.css>
         <link rel=stylesheet href=resources/font-awesome-4.7.0/css/font-awesome.min.css>
-        
+
         <script src=jquery.min.js></script>
         <script src=index.js></script>
         <script src=mobile.js></script>
@@ -60,11 +61,11 @@
             </a>
         </nav>
         <nav class=hidden><a href="#">d</a></nav>
-        
+
         <a id=mlhBanner
            href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white"
            target=_blank></a>
-        
+
         <section id=main_s>
             <a id=main class=navLink></a>
             <img id=logo src=resources/poly_hacks_logo.png alt=PolyHacks>
@@ -89,7 +90,7 @@
                 </button>
             </div>
         </section>
-        
+
         <section id=qa_s>
             <a id=qa class=navLink></a>
             <h1>Q&amp;A</h1>
@@ -102,7 +103,7 @@
                 <div class=answer>Answery Answer ans-answer</div>
             </div>
         </section>
-        
+
         <section id=whatnow_s>
             <a id=whatnow class=navLink></a>
             <h1>What Now?</h1>
@@ -115,11 +116,11 @@
                     caffeine</span> overdose</li>
             </ul>
         </section>
-        
+
         <section id=countdown_s>
             <a id=countdown class=navLink></a>
             <h1>Countdown</h1>
-            
+
             <div id=countdownTimer data-to='<?php
     $file = file_get_contents("countdown_date.json");
     $file = explode("}", $file)[0] . "}";
@@ -142,7 +143,7 @@
 <?php
     $str = "Everybody try to get <span id=goal>500</span> presses!";
     if ($num > 500) $str = "It's working! Keep clicking for button-related puns! (next goal: <span id=goal>1,500</span>)";
-    if ($num > 1500) $str = "You guys are pressing me out. (next: <span id=goal>2,500</span>)"; 
+    if ($num > 1500) $str = "You guys are pressing me out. (next: <span id=goal>2,500</span>)";
     if ($num > 2500) $str = "I'm hard pressed to show you these numbers. (<span id=goal>3,500</span>)";
     if ($num > 3500) $str = "I'm part of an important click now. (<span id=goal>4,500</span>)";
     if ($num > 4500) $str = "It's a very <i>PRESS-tigious</i> click. (<span id=goal>6,500</span>)";
@@ -161,7 +162,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id=sponsors_s>
             <a id=sponsors class=navLink></a>
             <h1>Sponsors/​Partners</h1>
@@ -173,7 +174,7 @@
             $xml = simplexml_load_string($file);
             $json = json_encode($xml);
             $array = json_decode($json, TRUE)["image"];
-            
+
             foreach($array as $img) {
                 $sponsorImg ="
                     <a class=\"sponsorImg priority{$img["size"]}\" target=_blank
@@ -193,7 +194,7 @@
 ?>
             </div>
         </section>
-        
+
         <section id=map_s>
             <a id=map class=navLink></a>
             <div id=mapCover>
@@ -204,7 +205,7 @@
                         id=imTheMap frameborder="0" allowfullscreen="" class=preventScroll></iframe>
             </div>
         </section>
-        
+
         <section id=contact_s>
             <a id=contact class=navLink></a>
             <a class="social fa fa-twitter" id=theTwitterLink
@@ -214,12 +215,12 @@
                target=_blank href="mailto:hackspoly@gmail.com">
             </a>
         </section>
-        
+
         <footer id=copyright>
             <a href="https://github.com/PrivacyPolicy/PolyHacks-com"
                target=_blank>&copy; Gabriel Hutchison</a>
         </footer>
-        
+
         <!-- dynamic objects -->
         <div id=tooltip class=hidden></div>
     </body>
