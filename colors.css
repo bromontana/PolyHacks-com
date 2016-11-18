@@ -17,10 +17,20 @@ nothingHasThisTagImPrettySure {
     color: #F3A271;
 }
 html, body, button  {
-    color: #F3F39E;
+    color: #FFFFFF;
 }
 
+red {
+    color: #F07E83
+}
 
+orange {
+    color: #F3A271
+}
+
+yellow {
+    color: #F4F39E
+}
 
 
 nothingHasThisTagImPrettySure {
@@ -29,12 +39,11 @@ nothingHasThisTagImPrettySure {
 nothingHasThisTagImPrettySure {
     background-color: white;
 }
-#theEmailLink:hover, #navbar, #main_s > p, button:hover,
-#whatnow_s, #sponsors_s{
-    background-color: #D494E5;
+#theEmailLink:hover, #navbar, #main_s > p, button:hover {
+    background-color: #F07E83;
 }
 #qa_s, #countdown_s, #map_s, #contact_s {
-    background-color: #EB87B0;
+    background-color: #F07E83;
 }
 gjeljgewgjigj {
     background-color: #F07E83;
@@ -74,13 +83,12 @@ nothingHasThisTagImPrettySure {
 
 
 
-
 /* Exceptions */
 #contact_s {
 }
 footer {
     color: white;
-    background: #000;
+    background: #F07E83;
 }
 .faq, #countdownTimer, #button {
     background: rgba(0, 0, 0, .1);

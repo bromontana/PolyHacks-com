@@ -68,12 +68,12 @@
 
         <section id=main_s>
             <a id=main class=navLink></a>
-            <img id=logo src=resources/poly_hacks_logo.png alt=PolyHacks>
-            <p>
-                PolyHacks will be on March 24th-25th
-                <br><br>
-                Register by January 3rd!
-            </p>
+            <img id=logo src=resources/polyhax.png alt=PolyHacks>
+
+              PolyHacks will be on March 24th-25th
+              <br><br>
+              Register by January 3rd!
+              <br><br>
             <br>
             <div id=buttons>
                 <button id=btnRegister class=showTooltip
