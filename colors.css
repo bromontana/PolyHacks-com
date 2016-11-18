@@ -39,11 +39,15 @@ nothingHasThisTagImPrettySure {
 nothingHasThisTagImPrettySure {
     background-color: white;
 }
-#theEmailLink:hover, #navbar, #main_s > p, button:hover {
+#navbar {
+  background-color:#F07E83
+}
+#theEmailLink:hover,  #main_s > p, button:hover {
     background-color: #F07E83;
 }
 #qa_s, #countdown_s, #map_s, #contact_s {
-    background-color: #F07E83;
+    background-color: rgba(240,126,131,0.4);
+
 }
 gjeljgewgjigj {
     background-color: #F07E83;
@@ -91,10 +95,11 @@ footer {
     background: #F07E83;
 }
 .faq, #countdownTimer, #button {
-    background: rgba(0, 0, 0, .1);
+    /*background: rgba(0, 0, 0, .1;*/
 }
 
 /* Buttons */
+
 button {
     background-color: transparent;
 }
