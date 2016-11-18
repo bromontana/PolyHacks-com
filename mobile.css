@@ -5,6 +5,7 @@
 @media screen and (max-width: 650px) {
     body {
         background-attachment: scroll;
+        background-size: auto 1000px;
     }
     nav {
         width: 100%;
