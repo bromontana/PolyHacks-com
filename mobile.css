@@ -53,17 +53,19 @@
     }
     #mlhBanner {
         top: 70px;
+        width: 78px;
+        height: 139px;
     }
-    
+
     .faq > .question {
         font-size: 26px;
         line-height: 45.5px;
     }
     .faq.show > .answer {
-        font-size: 13px;
-        line-height: 13px;
+        font-size: 20px;
+        line-height: 20px;
     }
-    
+
     .social {
         width: 52px;
         height: 52px;

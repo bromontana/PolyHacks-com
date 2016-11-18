@@ -90,3 +90,8 @@ footer {
 button {
     background-color: transparent;
 }
+@media screen and (max-width: 650px) {
+    button {
+        background-color: #D494E5;
+    }
+}
