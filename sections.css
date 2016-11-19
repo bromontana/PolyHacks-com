@@ -207,10 +207,10 @@
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
-    background: red;
+    background-image: "https://github.com/bromontana/PolyHacks-com/blob/master/resources/flame8.png?raw=True";
     top: 0px;
     left: 0px;
-    box-shadow: 0 0 5px #300 inset, 1px 2px 0 #800, 2px 4px 0 #700, 3px 6px 1px #600, 4px 6px 39px black;
+    /*box-shadow: 0 0 5px #300 inset, 1px 2px 0 #800, 2px 4px 0 #700, 3px 6px 1px #600, 4px 6px 39px black;*/
 
     -webkit-transition: box-shadow .3s, top .3s, left .3s;
     transition: box-shadow .3s, top .3s, left .3s;
