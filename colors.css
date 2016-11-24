@@ -40,7 +40,7 @@ nothingHasThisTagImPrettySure {
     background-color: white;
 }
 #navbar {
-  background-color:#F07E83
+  background-color:#F3A271
 }
 #theEmailLink:hover,  #main_s > p, button:hover {
     background-color: #F07E83;
@@ -105,6 +105,6 @@ button {
 }
 @media screen and (max-width: 650px) {
     button {
-        background-color: #F3F39E;
+      background-color: inherit;
     }
 }

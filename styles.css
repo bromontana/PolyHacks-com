@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background: url("resources/backgroundimg.png");
+    background: url("resources/backgroundimg(1).png");
     background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: center;
@@ -131,7 +131,9 @@ nav > a.current:not(:hover) .bar {
         height: 213px;
     }
 }
-
+a > button {
+  text-decoration: none;
+}
 a.navLink {
     position: relative;
     top: -12.5vw;
@@ -144,7 +146,10 @@ a.navLink {
 a#dropdown > img {
     vertical-align: middle;
 }
-
+a#logo > img {
+    vertical-align: middle;
+    padding-left: 1em;
+}
 @media screen and (min-width: 1000px) {
     a.navLink {
         top: calc(1000px * -.125);
@@ -162,9 +167,12 @@ a#dropdown > img {
     }
 }
 
+ul > li {
+    text-transform: inherit;
+}
 
 #whatnow_s, #sponsors_s {
-  background: url("resources/backgroundimg.png");
+  background: url("resources/backgroundimg(1).png");
   background-size: auto 130%;
   background-repeat: no-repeat;
   background-position: center;

@@ -2,6 +2,13 @@
     display: none;
 }
 
+#dropdown {
+    background: url(resources/polyhax.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 650px) {
     body {
         background-attachment: scroll;
@@ -46,6 +53,10 @@
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
+    nav > a#logo > img {
+        height:65px;
+    }
+
     .mobile {
         display: block;
     }
@@ -76,11 +87,13 @@
     .social:before {
         line-height: 52px;
     }
+
 }
 
 @media screen and (max-width: 375px) {
     body {
         width: 375px;
         overflow: scroll;
+        background-color: inherit;
     }
 }
