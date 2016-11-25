@@ -11,7 +11,11 @@
 
 @media screen and (max-width: 650px) {
     body {
-        background-size: auto 1000px;
+        background-image: url('resources/backgroundimg(1)_seamless_y.png');
+        background-attachment: scroll;
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-size: auto 200%;
     }
     nav {
         width: 100%;
