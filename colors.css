@@ -29,7 +29,7 @@ orange {
 }
 
 yellow {
-    color: #F4F39E
+    color: #F4F39E;
 }
 
 
@@ -40,7 +40,7 @@ nothingHasThisTagImPrettySure {
     background-color: white;
 }
 #navbar {
-  background-color:#F3A271
+  background-color:#F07E83;
 }
 #theEmailLink:hover,  #main_s > p, button:hover {
     background-color: #F07E83;
