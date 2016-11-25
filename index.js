@@ -193,7 +193,9 @@ $(function() {
     });
 });
 
-$("a > button").click(function(event) {
-    event.target.parentElement.click();
-    event.preventDefault();
+$(function() {
+    $("a > button").on("touchend", function(event) {
+        event.target.parentElement.click();
+        event.preventDefault();
+    });
 });
