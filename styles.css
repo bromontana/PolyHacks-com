@@ -264,9 +264,8 @@ footer#copyright > a {
     padding: 0;
 }
 
-@media screen and (min-aspect-ratio: 700/200) {
+@media screen and (min-aspect-ratio: 940/400) {
     body {
-/*        color: green;*/
         background-size: 100% auto;
     }
 }
