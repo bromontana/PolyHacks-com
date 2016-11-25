@@ -26,14 +26,6 @@ $(function() {
     });
 });
 
-
-// respond to button inputs
-$(function() {
-    $("button").click(function(event) {
-        alert("TODO: implement button " + event.currentTarget.id);
-    });
-});
-
 // show the tooltip
 $(function() {
     $(".showTooltip").hover(function(event) {
