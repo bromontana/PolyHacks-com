@@ -4,17 +4,24 @@ $filename = "clicks.txt";
 $failure = "failure";
 
 try {
-	$num = (int)file_get_contents($filename);
+	$fileData = file_get_contents($filename);
+	$num = (int) $fileData;
+	if ($fileData != (string)$num) {
+		die($failure . "1");
+	}
+	if ($fileData == "") {
+		die($failue . "2");
+	}
 	$num++;
 	if (is_writeable($filename)) {
 		if (file_put_contents($filename, $num . "")) {
-			echo $num . "";
+			die($num . "");
 		} else {
-			echo $failure;
+			die($failure . "3");
 		}
 	} else {
-		echo $failure;
+		die($failure . "4");
 	}
 } catch (Exception $e) {
-	echo $failure;
+	die($failure . "5");
 }

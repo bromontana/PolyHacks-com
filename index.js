@@ -149,8 +149,8 @@ $(function() {
             url: "add_click.php?cache=" + Date.now(),
             method: "GET",
             success: function(data, status) {
-                if (data == "failure") {
-                    console.error("Could not upload button click;"
+                if (data.indexOf("failure") == 0) {
+                    console.error("Could not upload button click; "
                                   + "is there no connection?");
                 } else {
                     setValue(data);
