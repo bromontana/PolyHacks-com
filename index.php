@@ -81,20 +81,22 @@
             <br>
             <div id=buttons>
 
-                <button id=btnRegister class=showTooltip
-                        tooltip="We will let you know when registration opens up!"
-                        href="https://www.google.com" target=_blank>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    target=_blank><button id=btnRegister class=showTooltip
+                        tooltip="We will let you know when registration opens up!">
                     Register
-                </button>
+                </button></a>
 
-                <button id=btnVolunteer class=showTooltip
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    target=_blank><button id=btnVolunteer class=showTooltip
                         tooltip="Help us run the hackathon!">
                     Volunteer
-                </button>
-                <button id=btnSponsor class=showTooltip
+                </button></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    target=_blank><button id=btnSponsor class=showTooltip
                         tooltip="Give us $$$ plz!">
                     Sponsor us
-                </button>
+                </button></a>
             </div>
         </section>
 
