@@ -260,8 +260,11 @@
         </section>
 
         <footer id=copyright>
-            <a href="https://github.com/PrivacyPolicy/PolyHacks-com"
-               target=_blank>&copy; Gabriel Hutchison</a><a> &amp; Frank Calas</a>
+            &copy;
+            <a href="https://github.com/PrivacyPolicy/"
+               target=_blank>Gabriel Hutchison</a> &amp;
+           <a href="https://github.com/bromontana/"
+               target=_blank>Frank Calas</a>
         </footer>
 
         <!-- dynamic objects -->
