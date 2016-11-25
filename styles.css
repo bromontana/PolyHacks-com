@@ -172,8 +172,7 @@ ul > li {
 }
 
 #whatnow_s, #sponsors_s {
-  background: url("resources/backgroundimg(1).png");
-  background-size: auto 130%;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
