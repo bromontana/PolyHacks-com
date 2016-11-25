@@ -23,7 +23,6 @@
         <link rel=stylesheet href=colors.css>
         <link rel=stylesheet href=sections.css>
         <link rel=stylesheet href=mobile.css>
-        <link rel=stylesheet href=scrollbars.css>
         <link rel=stylesheet href=resources/font-awesome-4.7.0/css/font-awesome.min.css>
 
         <script src=jquery.min.js></script>
