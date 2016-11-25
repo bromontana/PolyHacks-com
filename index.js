@@ -192,3 +192,8 @@ $(function() {
         $("#mapCover").removeClass("preventScroll");
     });
 });
+
+$("a > button").click(function(event) {
+    event.target.parentElement.click();
+    event.preventDefault();
+});
