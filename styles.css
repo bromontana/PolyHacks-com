@@ -258,9 +258,9 @@ footer#copyright > a {
     padding: 0;
 }
 
-@media screen and (min-aspect-ratio: 940/400) {
+@media screen and (min-aspect-ratio: 1000/553) {
     body {
-        background-size: 100% auto;
+        background-size: 100% auto !important;
     }
 }
 

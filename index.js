@@ -194,8 +194,18 @@ $(function() {
 });
 
 $(function() {
-    $("a > button").on("touchend", function(event) {
-        event.target.parentElement.click();
-        event.preventDefault();
+    var dragging = false;
+    $("a > button")
+        .on("touchstart", function(event) {
+            dragging = false;
+        })
+        .on("touchmove", function(event) {
+            dragging = true;
+        })
+        .on("touchend", function(event) {
+            if (!dragging) {
+                event.target.parentElement.click();
+                event.preventDefault();
+            }
     });
 });
