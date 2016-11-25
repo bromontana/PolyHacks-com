@@ -42,10 +42,16 @@ $(function() {
         var y = $elem.offset().top + $elem.outerHeight(true);
         var x = $elem.offset().left + $elem.outerWidth(true) / 2 -
             parseInt($elem.css("margin-left"));
-        $("#tooltip")
-            .text(text)
-            .css({top: (y + MARGIN) + "px",
-                  left: x + "px"})
+        // adjust to prevent tooltip from being offscreen
+        var $tooltip = $("#tooltip");
+        $tooltip.text(text);
+        // move off the right of the screen, then the left
+        while (x + $tooltip.width() / 2 >
+            $(document.body).width() - MARGIN * 3) x -= 1;
+        while (x - $tooltip.width() / 2 < MARGIN * 3) x += 1;
+        $tooltip.css(
+                {top: (y + MARGIN) + "px",
+                 left: x + "px"})
             .removeClass("hidden");
     }
     function hideTooltip() {
