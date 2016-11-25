@@ -195,6 +195,7 @@ button {
     font-family: 'Ubuntu', sans-serif;
     padding: .4em;
     font-size: 20pt;
+    margin: 3pt;
 
     -webkit-transition: background .2s, color .05s;
     transition: background .2s, color .05s;

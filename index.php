@@ -107,19 +107,19 @@
             <h1>Q&amp;A</h1>
             <div class=faq>
                 <a href=# class=question>What is a hackathon?</a>
-                <div class=answer>A hackathon is a 24 hour event where people get
+                <div class=answer>A hackathon is a 24-hour event where people get
                                   together and build a project (or hack). The hack is not limited
-                                  in scope, however we ask you to not to start yout hack
-                                  before the hackathon</div>
+                                  in scope, however we ask you to not to start your hack
+                                  before the hackathon.</div>
             </div>
             <div class=faq float=right>
                 <a href=# class=question>Can I go?</a>
-                <div class=answer>In order to go, you have to be a student,
+                <div class=answer>In order to go, you have to be a student
                                   and over the age of 18. </div>
             </div>
             <div class=faq>
                 <a href=# class=question>Is it free?</a>
-                <div class=answer>Yes! Polyhacks is completely FREE to attend! Food is included in the low, low, price of free</div>
+                <div class=answer>Yes! Polyhacks is completely FREE to attend! Food is included in the low, low, price of free.</div>
             </div>
             <div class=faq>
                 <a href=# class=question>What should I bring?</a>
@@ -129,15 +129,15 @@
                     <li>All your chargers</li>
                     <li>A pillow and blanket (if you want to sleep)</li>
                     <li>If you want to hack some hardware, bring everything you can!</li>
-                    <li>Lastly bring your awesome ideas and passion!</li>
+                    <li>Lastly, bring your awesome ideas and passion!</li>
                   </ul>
                 </div>
             </div>
             <div class=faq>
                 <a href=# class=question>Are there teams?</a>
-                <div class=answer>Absolutely! We strongly enourage being a part of a team.
-                                  Teams can be anywhere between 1 and 4 people and you can
-                                  either come with a team or find one when you get here</div>
+                <div class=answer>Absolutely! We strongly encourage being a part of a team.
+                                  Teams can be anywhere between 1 and 4 people, and you can
+                                  either come with a team or find one when you get here.</div>
             </div>
         </section>
 
@@ -178,7 +178,7 @@
     $file = str_replace("    ", "", $file);
     $file = str_replace(",", ", ", $file);
     echo $file;
-?>' data-past="Now!">Loading...</div>
+?>' data-past="The hackathon has started!">Loading...</div>
             <br>
             <div id=button>
                 <div id=bigRedButton></div>
