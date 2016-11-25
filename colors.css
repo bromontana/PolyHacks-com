@@ -42,7 +42,7 @@ nothingHasThisTagImPrettySure {
 #navbar {
   background-color:#F07E83;
 }
-#theEmailLink:hover,  #main_s > p, button:hover {
+#theEmailLink:hover,  #main_s > p, button:hover:not(.disabled) {
     background-color: #F07E83;
 }
 #qa_s, #countdown_s, #map_s, #contact_s {

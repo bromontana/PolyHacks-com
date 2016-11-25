@@ -82,7 +82,7 @@
             <div id=buttons>
 
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    target=_blank><button id=btnRegister class=showTooltip
+                    target=_blank><button id=btnRegister class="showTooltip disabled"
                         tooltip="We will let you know when registration opens up!">
                     Register
                 </button></a>

@@ -190,25 +190,19 @@ ul > li {
 
 /* Button overrides */
 button {
-/*    background: #492f92;*/
     border: 1px solid;
     border-radius: 3px;
-/*    border-color: #fff;*/
-/*    color: white;*/
     font-family: 'Ubuntu', sans-serif;
     padding: .4em;
-    font-size: 12pt;
+    font-size: 20pt;
 
     -webkit-transition: background .2s, color .05s;
     transition: background .2s, color .05s;
 }
-button:disabled {
-/*    color: lightgray;*/
-/*    background: #7a5dcb;*/
-/*    border-color: lightgray;*/
+button.disabled {
+    opacity: .4;
 }
-button:hover:not(:disabled) {
-/*    background: #1d6a9a;*/
+button:hover:not(.disabled) {
     cursor: pointer;
 }
 button:focus {

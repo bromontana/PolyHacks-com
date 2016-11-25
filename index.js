@@ -110,7 +110,7 @@ $(function() {
             var hours = data.h % 24;
             var mins = data.n % 60;
             var secs = data.s % 60;
-            
+
             $("#countdownTimer").text(
                 days + " days : " +
                 hours + " hrs : " +
