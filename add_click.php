@@ -6,11 +6,11 @@ $failure = "failure";
 try {
 	$fileData = file_get_contents($filename);
 	$num = (int) $fileData;
-	if ($fileData != (string)$num) {
+	if ($fileData != $num) {
 		die($failure . "1");
 	}
 	if ($fileData == "") {
-		die($failue . "2");
+		die($failure . "2");
 	}
 	$num++;
 	if (is_writeable($filename)) {
