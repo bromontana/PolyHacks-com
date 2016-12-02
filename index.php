@@ -74,7 +74,7 @@
             <a id=main class=navLink></a>
             <img id=logo src=resources/polyhax.png alt=PolyHacks>
 
-              PolyHacks will be on March 24th-25th
+              PolyHacks will be on March 25th-26th
               <br><br>
               Register by January 3rd!
               <br><br>
@@ -94,7 +94,7 @@
                 </button></a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                     target=_blank><button id=btnSponsor class=showTooltip
-                        tooltip="Give us $$$ plz!">
+                        tooltip="Help us make Polyhacks Happen!">
                     Sponsor us
                 </button></a>
             </div>
