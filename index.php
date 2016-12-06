@@ -76,24 +76,23 @@
 
               PolyHacks will be on March 25th-26th
               <br><br>
-              Register by January 3rd!
+              Preregister to get emailed when registration opens up!
               <br><br>
-            <br>
             <div id=buttons>
 
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    target=_blank><button id=btnRegister class="showTooltip disabled"
+                <a href=""
+                    target=_blank><button id=btnRegister class="showTooltip"
                         tooltip="We will let you know when registration opens up!">
-                    Register
+                    Preregister
                 </button></a>
 
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                <a href=""
                     target=_blank><button id=btnVolunteer class=showTooltip
                         tooltip="Help us run the hackathon!">
                     Volunteer
                 </button></a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    target=_blank><button id=btnSponsor class=showTooltip
+                    target=_blank><button id=btnSponsor class="showTooltip disabled"
                         tooltip="Help us make Polyhacks Happen!">
                     Sponsor us
                 </button></a>
@@ -119,7 +118,7 @@
             </div>
             <div class=faq>
                 <a href=# class=question>Is it free?</a>
-                <div class=answer>Yes! Polyhacks is completely FREE to attend! Food is included in the low, low, price of free.</div>
+                <div class=answer>Yes! Polyhacks is completely FREE to attend! Food and all!</div>
             </div>
             <div class=faq>
                 <a href=# class=question>What should I bring?</a>
