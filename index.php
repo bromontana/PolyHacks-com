@@ -80,13 +80,13 @@
               <br><br>
             <div id=buttons>
 
-                <a href=""
+                <a href="https://polyhacks2017.typeform.com/to/N2Eim1"
                     target=_blank><button id=btnRegister class="showTooltip"
                         tooltip="We will let you know when registration opens up!">
                     Preregister
                 </button></a>
 
-                <a href=""
+                <a href="https://polyhacks2017.typeform.com/to/S7tZcN"
                     target=_blank><button id=btnVolunteer class=showTooltip
                         tooltip="Help us run the hackathon!">
                     Volunteer
